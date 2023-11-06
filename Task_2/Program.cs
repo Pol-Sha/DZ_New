@@ -31,18 +31,17 @@ void printArray(int[] array)
     }
     System.Console.WriteLine();                 // Перевод строки (чтобы отделять массивы)
 }
-int FindMediana(int[] array)
+int FindMediana(int[] array) // нахождение медианы в массиве
 {
     int SizeArray = array.Length % 2;
     int mediana = 0;
-    if (SizeArray == 1)
+    if (SizeArray == 1) // если число элементов в массиве нечетное
     {
-        for (int i = 0; i < array.Length / 2 + 1; i++)
-        {
+        
             mediana = array[array.Length / 2];
-        }
+      
     }        
-    else //if (SizeArray == 0 )
+    else  // если число элементов в массиве чётное
     {
         mediana  = array[array.Length / 2 - 1] + array[array.Length / 2];
     }
